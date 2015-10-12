@@ -4,7 +4,7 @@ class Database{
     public $conn;
     //privatni konstrukt ne dozvoljava instancireanje klase vise od jednog puta
     private function __construct() {
-        $this->conn = new PDO("mysql:host=localhost;dbname=news;charset=utf8;","root","");
+        $this->conn = new PDO("mysql:host=localhost;dbname=news;charset=utf8;","root","dd777bb");
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     
