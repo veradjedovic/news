@@ -31,9 +31,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header">
 				<div class="header-left">
 					<div class="logo">
-						<a href="index.html">
+						<a href="./index.php">
 							<h6>the</h6>
-							<h1>News <span>Reporter</span></h1>
+							<h1>Belgrade <span>News</span></h1>
 						</a>
 					</div>
 				</div>
@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right">
 					<div class="top-menu">
 						<ul>        
-							<li><a href="index.html">Home</a></li> |  
+							<li><a href="./index.php">Home</a></li> |  
 							<li><a href="about.html">About Us</a></li> |   
 							<li><a href="contact.html">Contact Us</a></li>  |   
 							<li><a id="modal_trigger" href="#modal" class="btn1">Login</a>
@@ -227,25 +227,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					[VIEW]
 	
-	<ul class="comment-list">
-		  		   <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
-		  		   <li><img src="./view/images/avatar.png" class="img-responsive" alt="">
-		  		   <div class="desc">
-		  		   <p>View all posts by: <a href="#" title="Posts by admin" rel="author">admin</a></p>
-		  		   </div>
-		  		   <div class="clearfix"></div>
-		  		   </li>
-		  	  </ul>
-				 <div class="content-form">
-					 <h3>Leave a comment</h3>
-					<form>
-						<input type="text" placeholder="Name" required/>
-						<input type="text" placeholder="Email" required/>
-						<input type="text" placeholder="Phone" required/>
-						<textarea placeholder="Message"></textarea>
-						<input type="submit" value="SEND"/>
-				   </form>
-						 </div>
+	
+				
 			</div>	
 				
 				<div class="col-md-3 side-bar">
@@ -285,21 +268,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="footer text-center">
 				<div class="bottom-menu">
-					<ul>                 
-						<li><a href="index.html">World  News</a></li> |
-						<li><a href="sports.html">Sports</a></li> |
-						<li><a href="tech.html">Techology</a></li> |
-						<li><a href="business.html">Business</a></li> |
-						<li><a href="movies.html">Movies</a></li> |
-						<li><a href="movies.html">Entertainment</a></li> |
-						<li><a href="books.html">Books</a></li> |
-						<li><a href="movies.html">Culture</a></li> |
-						<li><a href="classifieds.html">Classifieds</a></li> |
-						<li><a href="blog.html">Blogs</a></li>							
+					<ul> 
+                                          |<?php  foreach($allCategories as $category){?>
+						<li><a href="index.php?controller=Home&method=<?php echo $category->main_cat_name; ?>"><?php echo $category->main_cat_name; ?></a></li> |	
+                                          <?php } ?>
 					</ul>
 				</div>
 				<div class="copyright text-center">
-					<p>The News Reporter &copy; 2015 All rights reserved | Template by  <a href="http://w3layouts.com">W3layouts</a></p>
+					<p>The Belgrade News © 2015 All rights reserved by DraganS</p>
 				</div>
 			</div>
 		</div>
