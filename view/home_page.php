@@ -41,8 +41,8 @@
                                                             foreach ($data[0] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -65,8 +65,8 @@
                                                             foreach ($data[1] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -89,8 +89,8 @@
                                                             foreach ($data[2] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -99,11 +99,11 @@
 							</div>
 						</div>
                           
-				<!-- TEACH -->								
+				<!-- TECH -->								
 						<div class="tech-news">
 							<div class="main-title-head">
 								<h3>tech     news</h3>
-								<a href="index.php?controller=Home&method=Teach">More  +</a>
+								<a href="index.php?controller=Home&method=Tech">More  +</a>
 								<div class="clearfix"></div>
 							</div>	
 							<div class="tech-news-grids">
@@ -168,7 +168,7 @@
                                                             ?>
                                                       
 							<div class="desk">
-								<a href="#" class="title"><?php echo $article->article_title; ?></a>
+								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?></a>
 								<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
                                                                 <p><a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a><span style="color:#CF0000;"><?php echo $ago;?></span></p>
 							</div>
@@ -188,7 +188,7 @@
                                                             foreach ($data[5] as $article){
                                                             ?>   
 							<div class="editor">
-								<a href="#"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
 								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><?php echo $article->article_title; ?></a>
 							</div>
 							<?php }?>
