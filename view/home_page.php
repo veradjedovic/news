@@ -31,7 +31,7 @@
                                                 <div class="world-news">
 							<div class="main-title-head">
 								<h3><?php echo $data[0][0]->main_cat_name; ?></h3>
-								<a href="#">More  +</a>
+								<a href="index.php?controller=Home&method=World">More  +</a>
 								<div class="clearfix"></div>
 							</div>
 							<div class="world-news-grids">
@@ -41,8 +41,8 @@
                                                             foreach ($data[0] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -55,7 +55,7 @@
                                                 <div class="latest-articles">
 							<div class="main-title-head">
 								<h3><?php echo $data[1][0]->main_cat_name; ?></h3>
-								<a href="#">More  +</a>
+								<a href="index.php?controller=Home&method=Politics">More  +</a>
 								<div class="clearfix"></div>
 							</div>
 							<div class="world-news-grids">
@@ -65,8 +65,8 @@
                                                             foreach ($data[1] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -79,7 +79,7 @@
                                                 <div class="latest-articles">
 							<div class="main-title-head">
 								<h3><?php echo $data[2][0]->main_cat_name; ?></h3>
-								<a href="#">More  +</a>
+								<a href="index.php?controller=Home&method=Business">more +</a>
 								<div class="clearfix"></div>
 							</div>
 							<div class="world-news-grids">
@@ -89,8 +89,8 @@
                                                             foreach ($data[2] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -99,11 +99,11 @@
 							</div>
 						</div>
                           
-												
+				<!-- TECH -->								
 						<div class="tech-news">
 							<div class="main-title-head">
 								<h3>tech     news</h3>
-								<a href="#">More  +</a>
+								<a href="index.php?controller=Home&method=Tech">More  +</a>
 								<div class="clearfix"></div>
 							</div>	
 							<div class="tech-news-grids">
@@ -166,9 +166,9 @@
                                                          
                                        
                                                             ?>
-                                                        
+                                                      
 							<div class="desk">
-								<a href="#" class="title"><?php echo $article->article_title; ?></a>
+								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?></a>
 								<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
                                                                 <p><a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a><span style="color:#CF0000;"><?php echo $ago;?></span></p>
 							</div>
@@ -176,7 +176,7 @@
                                                             <?php }?>
                                                         
                                                         
-							<a class="more" href="#">More  +</a>
+							<a class="more" href="index.php?controller=Home&method=Culture">More  +</a>
 						</div>
                             <br>
                             <!--- SPORTS --> 
@@ -188,15 +188,20 @@
                                                             foreach ($data[5] as $article){
                                                             ?>   
 							<div class="editor">
-								<a href="#"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
 								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><?php echo $article->article_title; ?></a>
 							</div>
 							<?php }?>
 						</div>
+                            <a class="more" href="index.php?controller=Home&method=Sports">More  +</a>
 					</div>
 					<div class="clearfix"></div>	
 				</div>
+                                    
 				</div>	
+    
+    <!-- RIGHT SIDEBAR -->
+    
 				<div class="col-md-3 side-bar">
 					<div class="videos">
 						<div class="video-grid">
