@@ -1,8 +1,13 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" href="favicon.ico">
-<title>The Belgrade News| Home</title>
+<title>The News Reporter a Magazine Category Flat Bootstarp Responsive Website Template| Singlepage :: w3layouts</title>
 <link href="./view/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="./view/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -16,9 +21,6 @@
 <meta name="keywords" content="The News Reporter Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- SLIDER -->
-<script src="./view/js/jquery.easy-ticker.js"></script>
-
 <!--webfont-->
 
 </head>
@@ -29,9 +31,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header">
 				<div class="header-left">
 					<div class="logo">
-						<a href="./index.php";
+						<a href="index.html">
 							<h6>the</h6>
-							<h1>Belgrade <span>News</span></h1>
+							<h1>News <span>Reporter</span></h1>
 						</a>
 					</div>
 				</div>
@@ -178,41 +180,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			return false;
 		});
 
-	});
+	})
 </script></li> |   
 							<li><a class="play-icon popup-with-zoom-anim" href="#small-dialog1">Subscribe</a></li>
 						</ul>
 					</div>
 					<!---pop-up-box---->  
-					<link href="./view/css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="./view/js/jquery.magnific-popup.js" type="text/javascript"></script>
+					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 					<!---//pop-up-box---->
-					<div id="small-dialog1" class="mfp-hide">
-						<div class="signup">
-							<h3>Subscribe</h3>
-							<h4>Enter Your Valid E-mail</h4>
-							<input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" />
-							<div class="clearfix"></div>
-							<input type="submit"  value="Subscribe Now"/>
-						</div>
-					</div>	
-
-                     <script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
-				</script>	
 					<div class="search">
 						<form>
 							<input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}"/>
@@ -222,18 +198,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"></div>
 				</div>
 				<div class="clearfix"></div>
-				</div>
-                    
-                  <!-- MAIN MENY -->  
+			</div>
 			<span class="menu"></span>
 			<div class="menu-strip">
-				<ul>
-                               <?php
-                                $allCategories = MainCats::getAll("WHERE main_cat_status = 1");
-
-                              foreach ($allCategories as $category){?>
-                                 <li><a href="index.php?controller=Home&method=<?php echo $category->main_cat_name; ?>"><?php echo $category->main_cat_name; ?> </a></li>
-                                    <?php   } ?>
+				<ul>         
+					<?php 
+				/************************************************************************************************/
+					$allCategories = MainCats::getAll("WHERE main_cat_status = 1");
+						foreach($allCategories as $category){?>
+							<li><a href="index.php?controller=Home&method=<?php echo $category->main_cat_name; ?>"><?php echo $category->main_cat_name; ?></a></li>
+					<?php } 
+				/**************************************************************************************************/
+						?>
 				</ul>
 			</div>
 			<!-- script for menu -->
@@ -246,22 +222,84 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</script>
 			<!-- script for menu -->
 			<div class="clearfix"></div>
-			
-			
-                    [VIEW]
+			<div class="blog-main-content">		
+				<div class="col-md-9 total-news">
+					
+					[VIEW]
+	
+	<ul class="comment-list">
+		  		   <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
+		  		   <li><img src="./view/images/avatar.png" class="img-responsive" alt="">
+		  		   <div class="desc">
+		  		   <p>View all posts by: <a href="#" title="Posts by admin" rel="author">admin</a></p>
+		  		   </div>
+		  		   <div class="clearfix"></div>
+		  		   </li>
+		  	  </ul>
+				 <div class="content-form">
+					 <h3>Leave a comment</h3>
+					<form>
+						<input type="text" placeholder="Name" required/>
+						<input type="text" placeholder="Email" required/>
+						<input type="text" placeholder="Phone" required/>
+						<textarea placeholder="Message"></textarea>
+						<input type="submit" value="SEND"/>
+				   </form>
+						 </div>
+			</div>	
+				
+				<div class="col-md-3 side-bar">
+					<div class="l_g_r">
+									<div class="posts">
+										<h4>Recent posts</h4>
+										<h6><a href="#">Aliquam tincidunt mauris</a></h6>
+										<h6><a href="#">Vestibulum auctor lipsum</a></h6>
+										<h6><a href="#">Nunc dignissim risus</a></h6>
+										<h6><a href="#">Cras ornare tristiqu</a></h6>
+									</div>
+									<div class="recent-comments">
+										<h4>Recent Comments</h4>
+										<h6><a href="#">Amada Doe <span>on</span> Hello World!</a></h6>
+										<h6><a href="#">Peter Doe <span>on</span> Photography</a></h6>
+										<h6><a href="#">Steve Roberts <span>on</span> HTML5/CSS3</a></h6>
+										<h6><a href="#">Doe Peter<span>on</span> Photography</a></h6>
+									</div>
+									<div class="archievs">
+										<h4>Archives</h4>
+										<h6><a href="#">October 2014</a></h6>
+										<h6><a href="#">September 2014</a></h6>
+										<h6><a href="#">August 2014</a></h6>
+										<h6><a href="#">July 2014</a></h6>
+									</div>
+								<div class="categories">
+										<h4>Categories</h4>
+										<h6><a href="#">Vivamus vestibulum nulla</a></h6>
+										<h6><a href="#">Integer vitae libero ac risus e</a></h6>
+										<h6><a href="#">Vestibulum commo</a></h6>
+										<h6><a href="#">Cras iaculis ultricies</a></h6>
+								</div>						
 
-
+								</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 			<div class="footer text-center">
 				<div class="bottom-menu">
-                                   <ul>  | 
-                                            <?php
-                                                foreach ($allCategories as $category){?>
-						<li><a href="index.html"><?php echo $category->main_cat_name; ?> </a></li> |
-                                                <?php } ?>
+					<ul>                 
+						<li><a href="index.html">World  News</a></li> |
+						<li><a href="sports.html">Sports</a></li> |
+						<li><a href="tech.html">Techology</a></li> |
+						<li><a href="business.html">Business</a></li> |
+						<li><a href="movies.html">Movies</a></li> |
+						<li><a href="movies.html">Entertainment</a></li> |
+						<li><a href="books.html">Books</a></li> |
+						<li><a href="movies.html">Culture</a></li> |
+						<li><a href="classifieds.html">Classifieds</a></li> |
+						<li><a href="blog.html">Blogs</a></li>							
 					</ul>
 				</div>
 				<div class="copyright text-center">
-					<p>The Belgrade News &copy; 2015 All rights reserved by DraganS</p>
+					<p>The News Reporter &copy; 2015 All rights reserved | Template by  <a href="http://w3layouts.com">W3layouts</a></p>
 				</div>
 			</div>
 		</div>

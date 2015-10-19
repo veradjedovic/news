@@ -16,7 +16,7 @@
 
                            <ul class="pgwSlider">
                                <?php foreach($data[7] as $slider){ ?>
-                            <li> <img src="./view/images/<?php echo $slider->article_picture_slider; ?>" alt="<?php echo $slider->article_title;?>"></li>
+                            <li> <img src="./view/images/<?php echo $slider->article_picture_slider; ?>" alt="<?php echo "<a href='index.php?controller=News&method=index&id={$slider->article_id}'>".$slider->article_title."</a>";?>"></li>
                              <?php   }?>
                        </ul>
 
@@ -44,7 +44,7 @@
 									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
 									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
-									<a href="#">Read More</a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
                                                             <?php } ?>
 								<div class="clearfix"></div>
@@ -68,7 +68,7 @@
 									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
 									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
-									<a href="#">Read More</a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
                                                             <?php } ?>
 								<div class="clearfix"></div>
@@ -92,7 +92,7 @@
 									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
 									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
-									<a href="#">Read More</a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
                                                             <?php } ?>
 								<div class="clearfix"></div>
@@ -170,7 +170,7 @@
 							<div class="desk">
 								<a href="#" class="title"><?php echo $article->article_title; ?></a>
 								<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
-                                                                <p><a href="#">Read More</a><span style="color:#CF0000;"><?php echo $ago;?></span></p>
+                                                                <p><a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a><span style="color:#CF0000;"><?php echo $ago;?></span></p>
 							</div>
 							
                                                             <?php }?>
@@ -189,7 +189,7 @@
                                                             ?>   
 							<div class="editor">
 								<a href="#"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
-								<a href="#"><?php echo $article->article_title; ?></a>
+								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><?php echo $article->article_title; ?></a>
 							</div>
 							<?php }?>
 						</div>
