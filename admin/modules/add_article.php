@@ -101,20 +101,58 @@
     <label for="article_intro_text">Article intro text:</label><br>
     <input class="form-control" type="text" name="article_intro_text" id="article_intro_text" placeholder="Article intro text"><br><br>
     <textarea name="article_text" style="height: 400px;"></textarea><br>
+    
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Show in Slider</th>
+                <th>Show in Home Page</th>
+                <th>Show in Main Category Page</th>
+                <th>Show in Top Story in Category</th>
+                <th>Publish in Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Show <input type="radio" name="slider" value="1"><br>
+                Hide <input type="radio" name="slider" value="0" checked></td>
+              
+                <td>Show <input type="radio" name="homepage" value="1"><br>
+                Hide <input type="radio" name="homepage" value="0" checked></td>
+                
+                <td>Show <input type="radio" name="maincat" value="1"><br>
+                Hide <input type="radio" name="maincat" value="0" checked></td>
+                
+                <td>Show <input type="radio" name="topstory" value="1"><br>
+                Hide <input type="radio" name="topstory" value="0" checked></td>
+                
+                <td>Show <input type="radio" name="publish" value="1"><br>
+                Hide <input type="radio" name="publish" value="0" checked></td>
+            </tr>
+       </tbody>
+    </table>
+            
+        
+        
+        
+    
+    
+    
     <input type="submit" name="submit" value="Save">
 </form>
 <?php    if (isset($_POST['cat'])){
         var_dump($_POST['cat']);
          $cate =  explode(" ", $_POST['cat']);
          //var_dump($cate);
-         echo "Main category: ". $main_category = $cate[0]."<br>";
-         echo "Subcategory: ". $sub_category = $cate[1];
+         $main_category = $cate[0];
+         $sub_category = $cate[1];
          $name = explode(".",$_FILES['img']['name']);
          //var_dump($name);
   /**********************************************************************************************************/       
          $time = date("H_m_i");
          $final_article_picture_name = $name[0].$time.".".$name[1];
-         $final_article_picture_small_name = $name[0].$time."_small.".$name[1];
+         $final_article_picture_small_name = $name[0].$time."small.".$name[1];
          $final_article_slider_picture = $name[0].$time."slider.".$name[1];
          $final_article_slider_picture_small = $name[0].$time."slider_small.".$name[1];
       /**************************************************************************************/
@@ -148,9 +186,12 @@
             $article->article_picture_slider = $final_article_slider_picture;
             $article->article_intro_text = $_POST['article_intro_text'];
             $article->article_text = $_POST['article_text'] ;
-            $article->article_status = "1";
+            $article->article_slider_status = $_POST['slider'];
+            $article->article_index_status = $_POST['homepage'];;
+            $article->article_category_page_status = $_POST['maincat'];;
+            $article->main_category_top_story = $_POST['topstory'];;
+            $article->article_status = $_POST['publish'];
+            $article->insert(); 
                 }
-                
-                var_dump($_POST);
-                
+                        
 ?>
