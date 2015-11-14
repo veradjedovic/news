@@ -29,6 +29,12 @@ if(!isset($_SESSION['admin_status'])||$_SESSION['admin_status']!=1){
     <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
      <!--- add CDN Tynemce -->
      <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+<!-- Verify.js (with Notify.js included) -->
+<script src="//raw.github.com/jpillora/verifyjs/gh-pages/dist/verify.notify.min.js"></script>
+
 <script type="text/javascript">
 tinymce.init({
     selector: "textarea",
@@ -140,6 +146,11 @@ font-size: 16px;">
                 $('#example').dataTable();
         } );
  
+   $.verify({
+    prompt: function(element, text) {
+        alert(text);
+  });
+});
     </script>
 </body>
 </html>

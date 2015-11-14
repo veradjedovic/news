@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<base href="/news/view" />
     <link rel="shortcut icon" href="favicon.ico">
 <title>The Belgrade News| Home</title>
 <link href="./view/css/bootstrap.css" rel='stylesheet' type='text/css' />

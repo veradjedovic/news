@@ -1,9 +1,10 @@
 <?php
 
 ?>
+
 <form action="" method="POST" enctype="multipart/form-data">
     <label for="article_title">Article title:</label><br>
-    <input class="form-control" type="text" name="article_title" id="article_title" placeholder="Article title" required><br><br>
+    <input class="form-control" type="text" name="article_title" id="article_title" placeholder="Article title" data-validate="required,number"><br><br>
     
     <label for="article_subtitle">Article subtitle:</label><br>
     <input class="form-control" type="text" name="article_subtitle" id="article_subtitle" placeholder="Article subtitle"><br><br>
@@ -57,7 +58,7 @@
              /*****************************************************************************/         
             $cultureCats = Cats::getAll("where link_to_main = 4");
             foreach ($cultureCats as $culture){
-                echo "<option value='"." {$culture->cat_id}'>{$culture->cat_name}</option>";
+                echo "<option value='{$session_cats[3]->main_cat_id}"." {$culture->cat_id}'>{$culture->cat_name}</option>";
               } 
     /*******************************************************************************/  
     ?>
@@ -132,14 +133,7 @@
             </tr>
        </tbody>
     </table>
-            
-        
-        
-        
-    
-    
-    
-    <input type="submit" name="submit" value="Save">
+    <button class="btn-success form-control" type="submit" name="insert">Save</button>
 </form>
 <?php    if (isset($_POST['cat'])){
         var_dump($_POST['cat']);
