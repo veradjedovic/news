@@ -1,5 +1,5 @@
     <?php //var_dump($data); ?>
-<br>	
+<br>
 <div class="main-content">		
 				<div class="col-md-9 total-news">
 					<div class="">
@@ -246,12 +246,15 @@
 					<div class="sign_up text-center">
 						<h3>Sign  Up  for    Newsletter</h3>
 						<p class="sign">Sign up to receive our free newsletters!</p>
-						<form>
-							<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-							<input type="text" class="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<form action="./view/newsletter.php" method="POST" class="ajax">
+							<input type="text" class="text" name="subscriber_name" placeholder="Name">
+							<input type="text" class="text" name="subscriber_email" placeholder="Email Address">
 							<input type="submit" value="submit">
 						</form>
 						<p class="spam">We do not spam. We value your privacy!</p>
+									<!-- LINK AJAX and AJAX REQUEST NEWSLETTER -->
+
+<script src="./view/js/newsletter_ajax.js"></script>
 					</div>
 					<div class="clearfix"></div>
 					<div class="popular">

@@ -1,3 +1,4 @@
+<base href="/news/view/images" />
 <div class="grids">
 		<div class="grid box">
 			<div class="grid-header">

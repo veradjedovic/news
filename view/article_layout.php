@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
+<base href="/news/view" />
 <title>The News Reporter a Magazine Category Flat Bootstarp Responsive Website Template| Singlepage :: w3layouts</title>
 <link href="./view/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
