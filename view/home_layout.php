@@ -11,6 +11,8 @@
 <script src="./view/js/jquery.min.js"></script>
 <script type="text/javascript" src="./view/js/jquery.leanModal.min.js"></script>
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<!-- LINK AJAX GOOGLE CDN -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -251,7 +253,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
                     [VIEW]
 
-
+			
 			<div class="footer text-center">
 				<div class="bottom-menu">
                                    <ul>  | 
