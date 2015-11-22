@@ -32,6 +32,12 @@ if(!isset($_SESSION['admin_status'])||$_SESSION['admin_status']!=1){
 <!-- jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 
+<!-- Fancy Box -->
+<script src="assets/js/fancyBox/lib/jquery-1.9.0.min.js"></script>
+<script src="assets/js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<link href="assets/js/fancyBox/source/jquery.fancybox.css">
+<script src="assets/js/fancyBox/source/jquery.fancybox.js"></script>
+<script src="assets/js/fancyBox/source/jquery.fancybox.pack.js"></script>
 <!-- Verify.js (with Notify.js included) -->
 <script src="//raw.github.com/jpillora/verifyjs/gh-pages/dist/verify.notify.min.js"></script>
 
@@ -84,16 +90,16 @@ font-size: 16px;">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 		<li class="text-center">
-                    <img src="assets/img/gaga.jpg" class="user-image img-responsive"/>
+                    <img src="assets/img/img.png" class="user-image img-responsive"/>
 		</li>
                     <li>
                         <a  href="home.php?page=1"><i class="fa fa-pencil fa-3x"></i>Add new article</a>
                     </li>
                       <li>
-                        <a  href="home.php?page=2"><i class="fa fa-desktop fa-3x"></i>View articles</a>
+                        <a  href="home.php?page=2"><i class="fa fa-desktop fa-3x"></i>View all articles</a>
                     </li>
                      <li>
-                        <a  href="home.php?page=3"><i class="fa fa-picture-o fa-3x"></i>Edit old article</a>
+                        <a  href="home.php?page=7"><i class="fa fa-picture-o fa-3x"></i>Articles by category</a>
                     </li>
                 </ul>
                
@@ -108,7 +114,13 @@ font-size: 16px;">
 /******************************************************************************/         
                 $default_page = (isset($_GET['page']))?$_GET['page']:1;
                 $pages = array(
-                    "1"=>"add_article.php"
+                    "1"=>"add_article.php",
+                    "2"=>"view_articles.php",
+                    "3"=>"edit_article.php",
+                    "4"=>"updated_article.php",
+                    "5"=>"change_picture.php",
+                    "6"=>"updated_picture.php",
+                    "7"=>"articles_by_category.php"
                 );
  /****************************************************************************/             
                 if(isset($pages[$default_page])){
@@ -139,18 +151,8 @@ font-size: 16px;">
     <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
         <script>
             $(document).ready(function () {
-                $('#dataTables-example').dataTable();
+                $('.dataTables-example').dataTable();
             });
-            
-            $(document).ready(function() {
-                $('#example').dataTable();
-        } );
- 
-   $.verify({
-    prompt: function(element, text) {
-        alert(text);
-  });
-});
     </script>
 </body>
 </html>

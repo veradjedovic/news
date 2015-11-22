@@ -1,16 +1,13 @@
-<?php
-
-?>
-
+<h1>Write a new Article </h1>
 <form action="" method="POST" enctype="multipart/form-data">
     <label for="article_title">Article title:</label><br>
-    <input class="form-control" type="text" name="article_title" id="article_title" placeholder="Article title" data-validate="required,number"><br><br>
+    <input class="form-control" type="text" name="article_title" id="article_title" placeholder="Article title" required><br><br>
     
     <label for="article_subtitle">Article subtitle:</label><br>
-    <input class="form-control" type="text" name="article_subtitle" id="article_subtitle" placeholder="Article subtitle"><br><br>
+    <input class="form-control" type="text" name="article_subtitle" id="article_subtitle" placeholder="Article subtitle" required><br><br>
     
     <label for="article_creator">Article creator:</label><br>
-    <input class="form-control" type="text" name="article_creator" id="article_creator" placeholder="Article creator"><br><br>
+    <input class="form-control" type="text" name="article_creator" id="article_creator" placeholder="Article creator" required><br><br>
       <?php  
           /**********************************************************************************/
             $allMainCats = MainCats::getAll(); //all main cats from table main_cat
@@ -100,7 +97,7 @@
     <label id="img">Upload image:</label>
     <input type="file" name="img" id="img"><br><br>
     <label for="article_intro_text">Article intro text:</label><br>
-    <input class="form-control" type="text" name="article_intro_text" id="article_intro_text" placeholder="Article intro text"><br><br>
+    <input class="form-control" type="text" name="article_intro_text" id="article_intro_text" placeholder="Article intro text" required><br><br>
     <textarea name="article_text" style="height: 400px;"></textarea><br>
     
     
@@ -135,7 +132,7 @@
     </table>
     <button class="btn-success form-control" type="submit" name="insert">Save</button>
 </form>
-<?php    if (isset($_POST['cat'])){
+<?php    if (isset($_POST['insert'])){
         var_dump($_POST['cat']);
          $cate =  explode(" ", $_POST['cat']);
          //var_dump($cate);
