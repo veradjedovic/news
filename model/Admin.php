@@ -1,12 +1,11 @@
 <?php
 class Admin extends ActiveRecord{
-    public static $table = "admins";
+    public static $table = "administrators";
     public static $key = "admin_id";
     
     public function setSessions(){
         Session::set("admin_id", $this->admin_id);
         Session::set("admin_name", $this->admin_username);
-        Session::set("admin_last_seen", $this->admin_last_login);
         Session::set("admin_status", $this->admin_status);
     }
     public static function logout(){

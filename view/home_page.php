@@ -1,5 +1,5 @@
     <?php //var_dump($data); ?>
-<br>	
+<br>
 <div class="main-content">		
 				<div class="col-md-9 total-news">
 					<div class="">
@@ -41,8 +41,8 @@
                                                             foreach ($data[0] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -65,8 +65,8 @@
                                                             foreach ($data[1] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -89,8 +89,8 @@
                                                             foreach ($data[2] as $article){
                                                             ?>
 								<div class="world-news-grid">
-									<img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" />
-									<a href="#" class="title"><?php echo $article->article_title; ?> </a>
+                                                                    <a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?> </a>
 									<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
 									<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a>
 								</div>
@@ -99,11 +99,11 @@
 							</div>
 						</div>
                           
-				<!-- TEACH -->								
+				<!-- TECH -->								
 						<div class="tech-news">
 							<div class="main-title-head">
 								<h3>tech     news</h3>
-								<a href="index.php?controller=Home&method=Teach">More  +</a>
+								<a href="index.php?controller=Home&method=Tech">More  +</a>
 								<div class="clearfix"></div>
 							</div>	
 							<div class="tech-news-grids">
@@ -168,7 +168,7 @@
                                                             ?>
                                                       
 							<div class="desk">
-								<a href="#" class="title"><?php echo $article->article_title; ?></a>
+								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>" class="title"><?php echo $article->article_title; ?></a>
 								<p><?php echo substr($article->article_intro_text,0,100); ?>...</p>
                                                                 <p><a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>">Read More</a><span style="color:#CF0000;"><?php echo $ago;?></span></p>
 							</div>
@@ -188,7 +188,7 @@
                                                             foreach ($data[5] as $article){
                                                             ?>   
 							<div class="editor">
-								<a href="#"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
+								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><img src="./view/images/<?php echo $article->article_picture_small; ?>" alt="" /></a>
 								<a href="index.php?controller=News&method=index&id=<?php echo $article->article_id; ?>"><?php echo $article->article_title; ?></a>
 							</div>
 							<?php }?>
@@ -246,12 +246,15 @@
 					<div class="sign_up text-center">
 						<h3>Sign  Up  for    Newsletter</h3>
 						<p class="sign">Sign up to receive our free newsletters!</p>
-						<form>
-							<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-							<input type="text" class="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<form action="./view/newsletter.php" method="POST" class="ajax">
+							<input type="text" class="text" name="subscriber_name" placeholder="Name">
+							<input type="text" class="text" name="subscriber_email" placeholder="Email Address">
 							<input type="submit" value="submit">
 						</form>
 						<p class="spam">We do not spam. We value your privacy!</p>
+									<!-- LINK AJAX and AJAX REQUEST NEWSLETTER -->
+
+<script src="./view/js/newsletter_ajax.js"></script>
 					</div>
 					<div class="clearfix"></div>
 					<div class="popular">
